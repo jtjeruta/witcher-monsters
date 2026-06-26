@@ -12,7 +12,6 @@ namespace WitcherMonsters
         public override void CompPostMake()
         {
             base.CompPostMake();
-            EnsureManhunter();
             ResetCheckTimer();
         }
 
@@ -42,6 +41,11 @@ namespace WitcherMonsters
 
         private void EnsureManhunter()
         {
+            if (!LeshenUtility.IsActivated(parent.pawn))
+            {
+                return;
+            }
+
             Pawn pawn = parent.pawn;
             if (pawn.Dead || pawn.InMentalState && pawn.MentalStateDef == MentalStateDefOf.ManhunterPermanent)
             {

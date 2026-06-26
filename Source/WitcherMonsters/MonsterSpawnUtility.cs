@@ -32,8 +32,19 @@ namespace WitcherMonsters
 
         public static void ApplyContractBeastState(Pawn pawn)
         {
-            if (pawn == null)
+            if (pawn == null || !LeshenUtility.IsLeshen(pawn))
             {
+                return;
+            }
+
+            if (ContractBeastUtility.IsContractBeast(pawn))
+            {
+                return;
+            }
+
+            if (WitcherMonstersDefOf.WitcherMonsters_ContractBeast == null)
+            {
+                Log.Error("[WitcherMonsters] Missing HediffDef WitcherMonsters_ContractBeast.");
                 return;
             }
 
@@ -41,16 +52,6 @@ namespace WitcherMonsters
                 WitcherMonstersDefOf.WitcherMonsters_ContractBeast,
                 pawn);
             pawn.health.AddHediff(contractBeast);
-
-            if (!pawn.InMentalState && pawn.mindState?.mentalStateHandler != null)
-            {
-                pawn.mindState.mentalStateHandler.TryStartMentalState(
-                    MentalStateDefOf.ManhunterPermanent,
-                    null,
-                    forced: true,
-                    forceWake: false,
-                    causedByMood: false);
-            }
         }
     }
 }

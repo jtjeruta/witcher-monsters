@@ -4,14 +4,19 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>WitcherMonsters_Leshen</defName>
     <label>leshen</label>
-    <description>A malevolent forest spirit bound to ancient woodland. Contract beasts like the leshen cannot be tamed and will hunt until destroyed.</description>
+    <description>A malevolent forest spirit bound to ancient woodland. It stands motionless among the trees until intruders draw near, then skips through the forest and lashes out with wolves and bone spines from a distance.</description>
     <statBases>
-      <MoveSpeed>4.0</MoveSpeed>
+      <MoveSpeed>1.0</MoveSpeed>
       <ComfyTemperatureMin>-25</ComfyTemperatureMin>
       <MarketValue>1200</MarketValue>
       <Wildness>1.0</Wildness>
+      <LeatherAmount>0</LeatherAmount>
+      <MeatAmount>30</MeatAmount>
     </statBases>
     <uiIconScale>1.2</uiIconScale>
+    <butcherProducts>
+      <WoodLog>40</WoodLog>
+    </butcherProducts>
     <tools>
       <li>
         <label>left claw</label>
@@ -22,6 +27,7 @@
         <power>14</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <chanceFactor>0</chanceFactor>
       </li>
       <li>
         <label>right claw</label>
@@ -32,6 +38,7 @@
         <power>14</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <chanceFactor>0</chanceFactor>
       </li>
       <li>
         <capacities>
@@ -40,20 +47,25 @@
         <power>18</power>
         <cooldownTime>2.4</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.5</chanceFactor>
+        <chanceFactor>0</chanceFactor>
       </li>
     </tools>
     <race>
       <herdAnimal>false</herdAnimal>
-      <predator>true</predator>
+      <predator>false</predator>
       <body>QuadrupedAnimalWithPaws</body>
-      <baseHungerRate>0.35</baseHungerRate>
+      <baseHungerRate>0</baseHungerRate>
       <baseBodySize>1.6</baseBodySize>
       <baseHealthScale>3.0</baseHealthScale>
-      <foodType>CarnivoreAnimal</foodType>
-      <leatherDef>Leather_Bear</leatherDef>
+      <foodType>None</foodType>
+      <fleshType>EntityFlesh</fleshType>
+      <bloodDef>Filth_DarkBlood</bloodDef>
+      <bleedRateFactor>0.5</bleedRateFactor>
+      <specificMeatDef>Meat_Twisted</specificMeatDef>
       <lifeExpectancy>500</lifeExpectancy>
       <trainability>None</trainability>
+      <thinkTreeMain>Leshen</thinkTreeMain>
+      <thinkTreeConstant>LeshenConstant</thinkTreeConstant>
       <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
       <lifeStageAges>
@@ -78,25 +90,27 @@
     <combatPower>350</combatPower>
     <ecoSystemWeight>0</ecoSystemWeight>
     <wildGroupSize>1~1</wildGroupSize>
+    <overrideDebugActionCategory>Entity</overrideDebugActionCategory>
     <abilities>
-      <li>WitcherMonsters_LeshenVineWhip</li>
+      <li>WitcherMonsters_LeshenSpineLaunch</li>
       <li>WitcherMonsters_LeshenSummonWolves</li>
-      <li>WitcherMonsters_LeshenBlink</li>
+      <li>WitcherMonsters_LeshenSkip</li>
     </abilities>
     <lifeStages>
       <li>
         <!-- Placeholder: swap texPath to Textures/Things/Pawn/Animal/Leshen/Leshen when art is ready -->
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
+          <texPath>Things/Plant/TreeWillow</texPath>
+          <graphicClass>Graphic_Random</graphicClass>
           <drawSize>2.8</drawSize>
-          <color>(70,90,55)</color>
           <shadowData>
             <volume>(0.8, 0.6, 0.6)</volume>
             <offset>(0,0,-0.3)</offset>
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+          <texPath>Things/Plant/TreeWillow_Leafless</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
           <drawSize>2.8</drawSize>
         </dessicatedBodyGraphicData>
       </li>

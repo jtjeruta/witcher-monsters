@@ -6,14 +6,19 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>Contract beasts for witcher hunts. Adds custom monsters that are always hostile, never tameable, and meant for future witcher contract quests.
+  <description>Contract beasts for witcher hunts. Adds custom monsters that are never tameable and meant for future witcher contract quests.
 
-Currently includes the leshen — a forest spirit with a vine whip, wolf summons, and short-range blink.</description>
+Currently includes the leshen — a dormant forest spirit that stirs when intruders draw near, then teleports through the trees and fights at range with Gorehulk-style spine launches and wolf summons.</description>
   <modDependencies>
     <li>
       <packageId>Ludeon.RimWorld.Biotech</packageId>
       <displayName>Biotech</displayName>
       <steamWorkshopUrl>steam://url/CommunityFilePage/Biotech</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>Ludeon.RimWorld.Anomaly</packageId>
+      <displayName>Anomaly</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/Anomaly</steamWorkshopUrl>
     </li>
     <li>
       <packageId>witcher.base</packageId>
@@ -25,6 +30,7 @@ Currently includes the leshen — a forest spirit with a vine whip, wolf summons
   <loadAfter>
     <li>Ludeon.RimWorld</li>
     <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
     <li>witcher.base</li>
   </loadAfter>
 </ModMetaData>

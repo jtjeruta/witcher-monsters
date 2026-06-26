@@ -4,7 +4,7 @@
   <HediffDef>
     <defName>WitcherMonsters_ContractBeast</defName>
     <label>contract beast</label>
-    <description>Marks this creature as a witcher contract beast. It cannot be tamed or calmed and remains permanently maddened.</description>
+    <description>Marks this creature as a witcher contract beast. It cannot be tamed or calmed. The leshen remains dormant until intruders draw near.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.6, 0.6, 0.6)</defaultLabelColor>
@@ -16,6 +16,10 @@
       </li>
     </stages>
     <comps>
+      <li Class="WitcherMonsters.HediffCompProperties_LeshenDormant">
+        <activationRadius>12</activationRadius>
+        <checkIntervalTicks>30</checkIntervalTicks>
+      </li>
       <li Class="WitcherMonsters.HediffCompProperties_ForceManhunter">
         <checkIntervalTicks>120</checkIntervalTicks>
       </li>

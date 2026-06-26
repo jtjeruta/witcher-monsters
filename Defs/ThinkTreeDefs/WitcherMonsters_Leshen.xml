@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThinkTreeDef>
+    <defName>Leshen</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>BurningResponse</treeDef>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>MentalStateCritical</treeDef>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>LordDuty</treeDef>
+        </li>
+
+        <!-- Activated: skip retreat when threatened; ranged combat only at safe distance -->
+        <li Class="WitcherMonsters.ThinkNode_ConditionalLeshenActivated">
+          <subNodes>
+            <li Class="WitcherMonsters.ThinkNode_ConditionalLeshenRetreat">
+              <threatRadius>8</threatRadius>
+              <subNodes>
+                <li Class="WitcherMonsters.JobGiver_LeshenSkipRetreat">
+                  <threatRadius>4</threatRadius>
+                </li>
+                <li Class="JobGiver_Idle" />
+              </subNodes>
+            </li>
+            <li Class="JobGiver_AIAbilityFight">
+              <targetAcquireRadius>12</targetAcquireRadius>
+              <targetKeepRadius>14</targetKeepRadius>
+              <skipIfCantTargetNow>true</skipIfCantTargetNow>
+              <ability>WitcherMonsters_LeshenSummonWolves</ability>
+            </li>
+            <li Class="JobGiver_AIAbilityFight">
+              <targetAcquireRadius>17</targetAcquireRadius>
+              <targetKeepRadius>20</targetKeepRadius>
+              <skipIfCantTargetNow>false</skipIfCantTargetNow>
+              <ability>WitcherMonsters_LeshenSpineLaunch</ability>
+            </li>
+            <li Class="JobGiver_Idle" />
+          </subNodes>
+        </li>
+
+        <!-- Dormant: slow shambler shuffle like a tree -->
+        <li Class="WitcherMonsters.ThinkNode_ConditionalLeshenDormant">
+          <subNodes>
+            <li Class="JobGiver_ShamblerWander">
+              <wanderRadius>3</wanderRadius>
+            </li>
+            <li Class="JobGiver_Idle" />
+          </subNodes>
+        </li>
+
+        <li Class="JobGiver_Idle" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  <ThinkTreeDef>
+    <defName>LeshenConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Despawned</treeDef>
+        </li>
+
+        <li Class="ThinkNode_ConditionalCanDoLordJobNow">
+          <subNodes>
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

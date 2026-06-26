@@ -8,6 +8,9 @@ namespace WitcherMonsters
     {
         public static HediffDef WitcherMonsters_ContractBeast;
         public static PawnKindDef WitcherMonsters_Leshen;
+        public static AbilityDef WitcherMonsters_LeshenSummonWolves;
+        public static AbilityDef WitcherMonsters_LeshenSkip;
+        public static AbilityDef WitcherMonsters_LeshenSpineLaunch;
 
         static WitcherMonstersDefOf()
         {

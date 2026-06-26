@@ -1,18 +1,19 @@
 # Witcher Monster Quests
 
-Contract beasts for witcher hunts in **RimWorld**. This companion mod to the Witcher suite adds custom monsters meant for future contract quests — always hostile, never tameable, and far deadlier than ordinary wildlife.
+Contract beasts for witcher hunts in **RimWorld**. This companion mod to the Witcher suite adds custom monsters meant for future contract quests — never tameable, and far deadlier than ordinary wildlife.
 
-> **Requires Biotech and [Witcher Base](../witcher).** Anomaly is optional and not required.
+> **Requires Biotech, Anomaly, and [Witcher Base](../witcher).**
 
 ## What it does
 
-The first contract beast is the **leshen** — a malevolent forest spirit with:
+The first contract beast is the **leshen** — a dormant forest spirit that looks like an ordinary tree until you draw near:
 
-- **Vine whip** — ranged cutting attack against nearby foes
+- **Dormant** — stands or shuffles listlessly; ignores distant colonists
+- **Vine whip** — ranged cutting attack once awakened
 - **Summon wolves** — calls maddened timber wolves to join the hunt
-- **Forest blink** — short-range jump through terrain
+- **Forest blink** — teleports away when foes get too close
 
-Contract beasts spawn **permanently maddened** and cannot be tamed (including via Axii) or calmed with ideology abilities.
+Contract beasts cannot be tamed (including via Axii) or calmed with ideology abilities once activated.
 
 ## Dev testing
 
@@ -23,7 +24,7 @@ Quest generation and biome pool integration are planned for a later update.
 ## Compatibility
 
 - Built for **RimWorld 1.6**.
-- Requires **Biotech** (animal ability system) and **Witcher Base**.
+- Requires **Biotech**, **Anomaly**, and **Witcher Base**.
 - Safe to add mid-save.
 
 ## Credits
