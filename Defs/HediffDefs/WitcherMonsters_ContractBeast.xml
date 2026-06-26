@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>WitcherMonsters_ContractBeast</defName>
+    <label>contract beast</label>
+    <description>Marks this creature as a witcher contract beast. It cannot be tamed or calmed and remains permanently maddened.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.6, 0.6, 0.6)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+    <comps>
+      <li Class="WitcherMonsters.HediffCompProperties_ForceManhunter">
+        <checkIntervalTicks>120</checkIntervalTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

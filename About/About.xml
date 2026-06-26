@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Witcher Monster Quests</name>
+  <packageId>witcher.monsters</packageId>
+  <author>Tristan</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Contract beasts for witcher hunts. Adds custom monsters that are always hostile, never tameable, and meant for future witcher contract quests.
+
+Currently includes the leshen — a forest spirit with a vine whip, wolf summons, and short-range blink.</description>
+  <modDependencies>
+    <li>
+      <packageId>Ludeon.RimWorld.Biotech</packageId>
+      <displayName>Biotech</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/Biotech</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>witcher.base</packageId>
+      <displayName>Witcher Base</displayName>
+      <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3749657575</downloadUrl>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3749657575</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>witcher.base</li>
+  </loadAfter>
+</ModMetaData>

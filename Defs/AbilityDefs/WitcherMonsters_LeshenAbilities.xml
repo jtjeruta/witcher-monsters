@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityDef>
+    <defName>WitcherMonsters_LeshenVineWhip</defName>
+    <label>vine whip</label>
+    <description>Lash a nearby foe with writhing forest vines, dealing cutting damage.</description>
+    <iconPath>UI/Abilities/Waterskip</iconPath>
+    <cooldownTicksRange>450</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5.9</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="WitcherMonsters.CompProperties_AbilityVineWhip">
+        <damageAmount>20</damageAmount>
+        <armorPenetration>0.35</armorPenetration>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>WitcherMonsters_LeshenSummonWolves</defName>
+    <label>summon wolves</label>
+    <description>Call maddened wolves from the surrounding forest to join the hunt.</description>
+    <iconPath>UI/Abilities/AnimalWarcall</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="WitcherMonsters.CompProperties_AbilitySummonWolves">
+        <wolfCount>2~3</wolfCount>
+        <spawnRadius>3~6</spawnRadius>
+        <maxAlliedWolvesNearby>2</maxAlliedWolvesNearby>
+        <enemySearchRadius>12</enemySearchRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>WitcherMonsters_LeshenBlink</defName>
+    <label>forest blink</label>
+    <description>Vanish through the trees and reappear a short distance away.</description>
+    <iconPath>UI/Abilities/MechLongJump</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <jobDef>CastJump</jobDef>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>blink</label>
+      <violent>false</violent>
+      <warmupTime>0.3</warmupTime>
+      <minRange>1.9</minRange>
+      <range>6.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+</Defs>
