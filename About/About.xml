@@ -6,9 +6,13 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>Contract beasts for witcher hunts. Adds custom monsters that are never tameable and meant for future witcher contract quests.
+  <description>Monster contracts and contract beasts for RimWorld colonies.
 
-Currently includes the leshen — a dormant forest spirit that stirs when intruders draw near, then teleports through the trees and fights at range with Gorehulk-style spine launches and wolf summons.</description>
+Take hunt jobs from random world quests or settlement caravans ("Browse witcher contracts"). Villagers describe attacks in vague, contradictory terms — the real beast is only revealed at the site. Rewards may be silver, faction goodwill, or the Law of Surprise (a delayed gift within a week).
+
+Includes the leshen — a dormant forest spirit that stirs when intruders draw near, then teleports through the trees and fights at range with Gorehulk-style spine launches and wolf summons.
+
+Optional Dark Ages encounter pools load when Van.Beasts is active.</description>
   <modDependencies>
     <li>
       <packageId>Ludeon.RimWorld.Biotech</packageId>
@@ -32,5 +36,6 @@ Currently includes the leshen — a dormant forest spirit that stirs when intrud
     <li>Ludeon.RimWorld.Biotech</li>
     <li>Ludeon.RimWorld.Anomaly</li>
     <li>witcher.base</li>
+    <li MayRequire="Van.Beasts">Van.Beasts</li>
   </loadAfter>
 </ModMetaData>

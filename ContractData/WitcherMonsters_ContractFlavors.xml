@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Wolf_MissingChildren</defName>
+    <questTitle>Missing children near [settlement]</questTitle>
+    <questDescription>A sobbing mother from [settlement] clutches a torn scarf. Her boy and his sister went to gather berries. Something hairy and fast took them into the pines.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Wolf_Livestock</defName>
+    <questTitle>Butchered livestock</questTitle>
+    <questDescription>Herders from [settlement] report every sheep in the night pasture torn apart. Not one of their dogs, they swear — a pack of demons on four legs.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Wolf_Travelers</defName>
+    <questTitle>Massacred travelers</questTitle>
+    <questDescription>Merchants fleeing [settlement] beg you to investigate an overturned cart. Wolves, but wrong — too bold, too many.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Wolf_Howls</defName>
+    <questTitle>Night howls</questTitle>
+    <questDescription>Elders at [settlement] will not send woodcutters out. The howling starts at dusk — something that hunts for sport.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Leshen_Trees</defName>
+    <questTitle>The forest that moves</questTitle>
+    <questDescription>A woodcutter from [settlement] says the trees themselves shifted. Roots snatched his partner. It looked like a man made of bark, then only forest again.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Leshen_Children</defName>
+    <questTitle>Stolen into the woods</questTitle>
+    <questDescription>Villagers near [settlement] say children who wandered too far were found frozen, staring at nothing. Something old in the grove watches them.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Leshen_Wolves</defName>
+    <questTitle>Wolves at its command</questTitle>
+    <questDescription>Hunters from [settlement] found their camp surrounded by maddened wolves. One swears he saw twisted wood directing them.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Leshen_Roots</defName>
+    <questTitle>Roots in the road</questTitle>
+    <questDescription>A trader reached [settlement] half-mad. Roots burst through the trail and dragged his mule under. A shape of moss and antlers stood among the oaks.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Bear_Cave</defName>
+    <questTitle>Monster in the cave</questTitle>
+    <questDescription>Miners from [settlement] refuse to return to a hillside dig. A huge hairy beast blocks the tunnel mouth — bigger than any bear they have seen.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Bear_Farm</defName>
+    <questTitle>Raided farmstead</questTitle>
+    <questDescription>A lone survivor staggered into [settlement]. Something smashed the door, took his brother, and left claw marks deep as a spade.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Bear_Hunters</defName>
+    <questTitle>Dead hunters</questTitle>
+    <questDescription>The hunting party from [settlement] never returned. Tracks like a bear, but the kills were deliberate — something man-smart and hungry.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Sightstealer_Eyes</defName>
+    <questTitle>Stolen faces</questTitle>
+    <questDescription>Refugees at [settlement] whisper of a valley where people forget their own names. Pale things with too many eyes — you look away and your friend is gone.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Sightstealer_Mist</defName>
+    <questTitle>Gray mist on the moor</questTitle>
+    <questDescription>Shepherds from [settlement] will not graze the high moor. The fog moved against the wind and shapes inside it blinked in and out.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Sightstealer_Screams</defName>
+    <questTitle>Screams without bodies</questTitle>
+    <questDescription>Guards from [settlement] heard their own voices calling for help. When they ran toward the sound, they found blood and nothing else.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Sightstealer_Pack</defName>
+    <questTitle>Pack of demons</questTitle>
+    <questDescription>Children at [settlement] draw black circles for faces. Ten hunters vanished in one night — adults believe the children now.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Shamblers_Graves</defName>
+    <questTitle>Graves disturbed</questTitle>
+    <questDescription>Gravediggers from [settlement] fled their work. The dead pulled themselves up — rotting limbs, hungry, endless.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Shamblers_Road</defName>
+    <questTitle>Blocked road</questTitle>
+    <questDescription>A courier reached [settlement] covered in filth. The north road is full of lurching corpses that do not speak and do not tire.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Shamblers_Village</defName>
+    <questTitle>Empty hamlet</questTitle>
+    <questDescription>Scouts from [settlement] found a hamlet with doors torn off. Shambling things in the fog — they did not stay to count them.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Ghoul_Crypt</defName>
+    <questTitle>Crypt desecration</questTitle>
+    <questDescription>Priests at [settlement] beg for help. Something crawled from the old crypt — hunched, fast, eating the dead.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Ghoul_Bodies</defName>
+    <questTitle>Missing corpses</questTitle>
+    <questDescription>Orderlies from [settlement] report bodies vanishing from the morgue. Gnawed bones were found outside town.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Ghoul_Night</defName>
+    <questTitle>Night feeder</questTitle>
+    <questDescription>Watchmen at [settlement] saw a hunched shape leap a wall with a child-sized sack. They need hunters, not guards.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Gorehulk_Tower</defName>
+    <questTitle>Thing at the tower</questTitle>
+    <questDescription>Refugees from [settlement] describe a swollen giant launching spikes at fleeing families, with rotting soldiers following like hounds.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Gorehulk_Pilgrims</defName>
+    <questTitle>Massacred pilgrims</questTitle>
+    <questDescription>A pilgrim who reached [settlement] sobs about a bloated devil that spat bone darts while smaller dead things finished those who fell.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Gorehulk_Bell</defName>
+    <questTitle>Church bell silenced</questTitle>
+    <questDescription>The chapel bell near [settlement] stopped mid-toll. A huge fleshy monster guards the ruins with shamblers on the cemetery walls.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Chimera_Beast</defName>
+    <questTitle>Unnatural beast</questTitle>
+    <questDescription>Hunters from [settlement] argue over what they saw — lion hide, serpent tail, all wrong. It killed three men before they ran.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Chimera_Herd</defName>
+    <questTitle>Monsters in the herd</questTitle>
+    <questDescription>Ranchers near [settlement] lost an entire herd to three abominations working together with claws and fangs on mismatched skins.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Chimera_Cave</defName>
+    <questTitle>Hybrid den</questTitle>
+    <questDescription>Prospectors fled into [settlement] babbling about stitched-together predators in a cave mouth — parts of many beasts, one hunger.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Devourer_Swallowed</defName>
+    <questTitle>Swallowed whole</questTitle>
+    <questDescription>A militiaman from [settlement] shows acid burns. A leaping mouth on legs swallowed his comrade whole. There may be more.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Devourer_Pit</defName>
+    <questTitle>Pit of bones</questTitle>
+    <questDescription>Children found a pit of polished bones near [settlement]. Something huge hops from shadow to shadow and eats everything.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Devourer_Night</defName>
+    <questTitle>Night leaps</questTitle>
+    <questDescription>Campfires outside [settlement] burn all night. Witnesses saw three creatures that devour in one gulp hunting together at dawn.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Revenant_Ghost</defName>
+    <questTitle>Ghost in the manor</questTitle>
+    <questDescription>Servants from [settlement]'s old manor swear a pale stalker drains sleep from its victims with a single touch.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Revenant_Miller</defName>
+    <questTitle>The miller's curse</questTitle>
+    <questDescription>A trader at [settlement] whispers that something which was once a man haunts the mill road and moves between shadows.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Revenant_Dreams</defName>
+    <questTitle>Shared nightmares</questTitle>
+    <questDescription>Half of [settlement] shares the same nightmare of a thin figure at the foot of the bed. Two farmers have not woken.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Metalhorror_Host</defName>
+    <questTitle>Metal in the blood</questTitle>
+    <questDescription>A doctor from [settlement] begs discreet help. One of theirs changed overnight — steel under the skin, wrong movements.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Metalhorror_Ship</defName>
+    <questTitle>Wreck on the shore</questTitle>
+    <questDescription>Fishers near [settlement] will not sail. A metal figure crawled from a wreck wearing a face they knew.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Metalhorror_Silence</defName>
+    <questTitle>Silent neighbor</questTitle>
+    <questDescription>A farmer from [settlement] reports a neighbor who stopped speaking — when cut, there was no blood, only wire.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+
+</Defs>

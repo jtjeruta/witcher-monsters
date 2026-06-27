@@ -10,6 +10,11 @@ namespace WitcherMonsters
             return pawn?.def?.defName == "WitcherMonsters_Leshen";
         }
 
+        public static bool IsLeshenKind(PawnKindDef kind)
+        {
+            return kind?.race?.defName == "WitcherMonsters_Leshen";
+        }
+
         public static HediffComp_LeshenDormant GetDormantComp(Pawn pawn)
         {
             if (pawn == null)

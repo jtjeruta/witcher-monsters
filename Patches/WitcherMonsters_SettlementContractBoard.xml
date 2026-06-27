@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/WorldObjectDef[defName="Settlement"]/comps</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/WorldObjectDef[defName="Settlement"]</xpath>
+      <value>
+        <comps>
+          <li Class="WitcherMonsters.WorldObjectCompProperties_ContractBoard" />
+        </comps>
+      </value>
+    </nomatch>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/WorldObjectDef[defName="Settlement"]/comps</xpath>
+      <value>
+        <li Class="WitcherMonsters.WorldObjectCompProperties_ContractBoard" />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/WorldObjectDef[defName="Site"]/comps</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/WorldObjectDef[defName="Site"]</xpath>
+      <value>
+        <comps>
+          <li Class="WitcherMonsters.WorldObjectCompProperties_ContractSiteData" />
+        </comps>
+      </value>
+    </nomatch>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/WorldObjectDef[defName="Site"]/comps</xpath>
+      <value>
+        <li Class="WitcherMonsters.WorldObjectCompProperties_ContractSiteData" />
+      </value>
+    </match>
+  </Operation>
+</Patch>

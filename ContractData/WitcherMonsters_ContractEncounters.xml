@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_WolfPack</defName>
+    <label>wolf pack</label>
+    <selectionWeight>1.2</selectionWeight>
+    <combatPower>120</combatPower>
+    <rewardSilver>450</rewardSilver>
+    <rewardGoodwill>6</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Wolf_Timber</pawnKind><count>4~6</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Wolf_MissingChildren</li>
+      <li>WitcherMonsters_Flavor_Wolf_Livestock</li>
+      <li>WitcherMonsters_Flavor_Wolf_Travelers</li>
+      <li>WitcherMonsters_Flavor_Wolf_Howls</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_LeshenWood</defName>
+    <label>forest spirit</label>
+    <selectionWeight>0.7</selectionWeight>
+    <combatPower>350</combatPower>
+    <rewardSilver>900</rewardSilver>
+    <rewardGoodwill>12</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>WitcherMonsters_Leshen</pawnKind><count>1~1</count></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Leshen_Trees</li>
+      <li>WitcherMonsters_Flavor_Leshen_Children</li>
+      <li>WitcherMonsters_Flavor_Leshen_Wolves</li>
+      <li>WitcherMonsters_Flavor_Leshen_Roots</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_BearMauling</defName>
+    <label>bear mauling</label>
+    <selectionWeight>1.0</selectionWeight>
+    <combatPower>200</combatPower>
+    <rewardSilver>550</rewardSilver>
+    <rewardGoodwill>8</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Bear_Grizzly</pawnKind><count>1~2</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Bear_Cave</li>
+      <li>WitcherMonsters_Flavor_Bear_Farm</li>
+      <li>WitcherMonsters_Flavor_Bear_Hunters</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_SightstealerSwarm</defName>
+    <label>sightstealer swarm</label>
+    <selectionWeight>0.6</selectionWeight>
+    <combatPower>400</combatPower>
+    <rewardSilver>800</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Sightstealer</pawnKind><count>5~10</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Sightstealer_Eyes</li>
+      <li>WitcherMonsters_Flavor_Sightstealer_Mist</li>
+      <li>WitcherMonsters_Flavor_Sightstealer_Screams</li>
+      <li>WitcherMonsters_Flavor_Sightstealer_Pack</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_ShamblerHorde</defName>
+    <label>shambler horde</label>
+    <selectionWeight>0.9</selectionWeight>
+    <combatPower>250</combatPower>
+    <rewardSilver>600</rewardSilver>
+    <rewardGoodwill>8</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>ShamblerSwarmer</pawnKind><count>3~8</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Shamblers_Graves</li>
+      <li>WitcherMonsters_Flavor_Shamblers_Road</li>
+      <li>WitcherMonsters_Flavor_Shamblers_Village</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_GhoulPack</defName>
+    <label>ghoul pack</label>
+    <selectionWeight>0.8</selectionWeight>
+    <combatPower>180</combatPower>
+    <rewardSilver>500</rewardSilver>
+    <rewardGoodwill>7</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Ghoul</pawnKind><count>1~3</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Ghoul_Crypt</li>
+      <li>WitcherMonsters_Flavor_Ghoul_Bodies</li>
+      <li>WitcherMonsters_Flavor_Ghoul_Night</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_GorehulkEscort</defName>
+    <label>gorehulk escort</label>
+    <selectionWeight>0.55</selectionWeight>
+    <combatPower>450</combatPower>
+    <rewardSilver>950</rewardSilver>
+    <rewardGoodwill>12</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Gorehulk</pawnKind><count>1~1</count><useEntityHostility>true</useEntityHostility></li>
+      <li><pawnKind>ShamblerSwarmer</pawnKind><count>2~3</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Gorehulk_Tower</li>
+      <li>WitcherMonsters_Flavor_Gorehulk_Pilgrims</li>
+      <li>WitcherMonsters_Flavor_Gorehulk_Bell</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_ChimeraPack</defName>
+    <label>chimera pack</label>
+    <selectionWeight>0.5</selectionWeight>
+    <combatPower>380</combatPower>
+    <rewardSilver>850</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Chimera</pawnKind><count>1~3</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Chimera_Beast</li>
+      <li>WitcherMonsters_Flavor_Chimera_Herd</li>
+      <li>WitcherMonsters_Flavor_Chimera_Cave</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_DevourerPack</defName>
+    <label>devourer pack</label>
+    <selectionWeight>0.5</selectionWeight>
+    <combatPower>420</combatPower>
+    <rewardSilver>900</rewardSilver>
+    <rewardGoodwill>11</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Devourer</pawnKind><count>1~3</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Devourer_Swallowed</li>
+      <li>WitcherMonsters_Flavor_Devourer_Pit</li>
+      <li>WitcherMonsters_Flavor_Devourer_Night</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_RevenantHunt</defName>
+    <label>revenant hunt</label>
+    <selectionWeight>0.45</selectionWeight>
+    <combatPower>300</combatPower>
+    <rewardSilver>750</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Revenant</pawnKind><count>1~1</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Revenant_Ghost</li>
+      <li>WitcherMonsters_Flavor_Revenant_Miller</li>
+      <li>WitcherMonsters_Flavor_Revenant_Dreams</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_MetalhorrorHunt</defName>
+    <label>metalhorror hunt</label>
+    <selectionWeight>0.4</selectionWeight>
+    <combatPower>320</combatPower>
+    <rewardSilver>800</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Metalhorror</pawnKind><count>1~1</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Metalhorror_Host</li>
+      <li>WitcherMonsters_Flavor_Metalhorror_Ship</li>
+      <li>WitcherMonsters_Flavor_Metalhorror_Silence</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+</Defs>

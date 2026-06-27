@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SitePartDef>
+    <defName>WitcherMonsters_ContractSite</defName>
+    <label>monster contract site</label>
+    <description>A site tied to a witcher monster contract.</description>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/Manhunters</expandingIconTexture>
+    <arrivedLetter>Whatever attacked these people may still be nearby. The locals' frightened stories did not prepare you for the scene.</arrivedLetter>
+    <arrivedLetterDef>NegativeEvent</arrivedLetterDef>
+    <tags>
+      <li>WitcherMonsters_Contract</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>WitcherMonsters_ContractScene</defName>
+    <linkWithSite>WitcherMonsters_ContractSite</linkWithSite>
+    <order>450</order>
+    <genStep Class="WitcherMonsters.GenStep_ContractScene" />
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>WitcherMonsters_ContractThreats</defName>
+    <linkWithSite>WitcherMonsters_ContractSite</linkWithSite>
+    <order>1600</order>
+    <genStep Class="WitcherMonsters.GenStep_ContractThreats" />
+  </GenStepDef>
+
+</Defs>

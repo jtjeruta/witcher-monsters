@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <QuestScriptDef>
+    <defName>WitcherMonsters_ContractHunt</defName>
+    <rootSelectionWeight>0.85</rootSelectionWeight>
+    <rootMinProgressScore>8</rootMinProgressScore>
+    <expireDaysRange>6~10</expireDaysRange>
+    <minRefireDays>12</minRefireDays>
+    <defaultHidden>false</defaultHidden>
+    <autoAccept>false</autoAccept>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->[questName]</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->[questDescription]</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="WitcherMonsters.QuestNode_EnsureContractOffer" />
+
+        <li Class="QuestNode_GetMap">
+          <canBeSpace>true</canBeSpace>
+        </li>
+
+        <li Class="QuestNode_Set">
+          <name>siteDistRange</name>
+          <value>2~10</value>
+        </li>
+
+        <li Class="WitcherMonsters.QuestNode_GetContractSiteTile">
+          <storeAs>siteTile</storeAs>
+        </li>
+
+        <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+          <storeAs>sitePartDefs</storeAs>
+          <storeFactionAs>siteFaction</storeFactionAs>
+          <sitePartsTags>
+            <li>
+              <tag>WitcherMonsters_Contract</tag>
+            </li>
+          </sitePartsTags>
+        </li>
+
+        <li Class="QuestNode_GetDefaultSitePartsParams">
+          <tile>$siteTile</tile>
+          <faction>$siteFaction</faction>
+          <sitePartDefs>$sitePartDefs</sitePartDefs>
+          <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+        </li>
+
+        <li Class="QuestNode_SubScript">
+          <def>Util_GenerateSite</def>
+        </li>
+
+        <li Class="WitcherMonsters.QuestNode_SetContractSiteData">
+          <site>$site</site>
+        </li>
+
+        <li Class="QuestNode_SpawnWorldObjects">
+          <worldObjects>$site</worldObjects>
+        </li>
+
+        <li Class="WitcherMonsters.QuestNode_AddContractKillWatcher">
+          <site>$site</site>
+          <inSignalSuccess>WitcherMonsters_ContractComplete</inSignalSuccess>
+        </li>
+
+        <li Class="QuestNode_WorldObjectTimeout">
+          <worldObject>$site</worldObject>
+          <isQuestTimeout>true</isQuestTimeout>
+          <delayTicks>$(randInt(12,28)*60000)</delayTicks>
+          <inSignalDisable>site.MapGenerated</inSignalDisable>
+          <destroyOnCleanup>true</destroyOnCleanup>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label>Contract expired</label>
+                <text>The villagers' monster contract has expired without a resolution.</text>
+              </li>
+              <li Class="QuestNode_End">
+                <outcome>Fail</outcome>
+              </li>
+            </nodes>
+          </node>
+        </li>
+
+        <li Class="QuestNode_Signal">
+          <inSignal>WitcherMonsters_ContractComplete</inSignal>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label>Contract fulfilled</label>
+                <text>The beast is slain. The frightened locals will speak of your colonists for years.</text>
+              </li>
+              <li Class="QuestNode_End">
+                <outcome>Success</outcome>
+                <sendStandardLetter>true</sendStandardLetter>
+              </li>
+            </nodes>
+          </node>
+        </li>
+
+        <li Class="WitcherMonsters.QuestNode_AddContractSiteDestroyed">
+          <site>$site</site>
+          <inSignalSuccess>WitcherMonsters_ContractComplete</inSignalSuccess>
+          <inSignalFail>WitcherMonsters_ContractAbandoned</inSignalFail>
+        </li>
+
+        <li Class="QuestNode_Signal">
+          <inSignal>WitcherMonsters_ContractAbandoned</inSignal>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_End">
+                <outcome>Fail</outcome>
+              </li>
+            </nodes>
+          </node>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+</Defs>

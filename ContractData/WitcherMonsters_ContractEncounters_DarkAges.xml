@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ContractFlavorDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Flavor_DA_Leviathan</defName>
+    <questTitle>Monster from the deep</questTitle>
+    <questDescription>Fishers from [settlement] refuse the lake. A shelled titan with crushing claws dragged boats under — not a crab, they swear, a leviathan.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Flavor_DA_RockTroll</defName>
+    <questTitle>Stone giant on the pass</questTitle>
+    <questDescription>Caravans from [settlement] will not cross the mountain pass. A creature of living rock blocks the road and hurls boulders.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Flavor_DA_BeardedTroll</defName>
+    <questTitle>Troll under the bridge</questTitle>
+    <questDescription>Millers near [settlement] say a bearded giant lives under the old bridge, taking toll in flesh. Travelers have stopped coming.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Flavor_DA_Crestel</defName>
+    <questTitle>Screeching bird-thing</questTitle>
+    <questDescription>Shepherds from [settlement] cover their ears. A crested horror with a piercing cry turns men to stone — or so the survivors claim.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Flavor_DA_Snaptoad</defName>
+    <questTitle>Swamp bellowing</questTitle>
+    <questDescription>Hunters from [settlement] will not enter the marsh. Something huge and toad-like spews filth that melts leather armor.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Flavor_DA_Phrak</defName>
+    <questTitle>Spined crawlers</questTitle>
+    <questDescription>Trappers near [settlement] found camps pierced by toxic spines. Two beasts with barbed tails hunt in pairs — fast and venomous.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Flavor_DA_BlackScribe</defName>
+    <questTitle>Thing in the scriptorium</questTitle>
+    <questDescription>Monks from [settlement] whisper of a black-scaled creature that drinks ink and blood alike. One survivor begs you to burn the abbey cellars.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractEncounterDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Encounter_DA_LeviathanCrab</defName>
+    <label>leviathan crab</label>
+    <selectionWeight>0.5</selectionWeight>
+    <requiredModPackageId>Van.Beasts</requiredModPackageId>
+    <combatPower>400</combatPower>
+    <rewardSilver>850</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>DA_LeviathanCrab</pawnKind><count>1~1</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs><li>WitcherMonsters_Flavor_DA_Leviathan</li></flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Encounter_DA_RockTroll</defName>
+    <label>rock troll</label>
+    <selectionWeight>0.5</selectionWeight>
+    <requiredModPackageId>Van.Beasts</requiredModPackageId>
+    <combatPower>450</combatPower>
+    <rewardSilver>950</rewardSilver>
+    <rewardGoodwill>12</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>DA_RockTroll</pawnKind><count>1~1</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs><li>WitcherMonsters_Flavor_DA_RockTroll</li></flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Encounter_DA_BeardedTroll</defName>
+    <label>bearded troll</label>
+    <selectionWeight>0.5</selectionWeight>
+    <requiredModPackageId>Van.Beasts</requiredModPackageId>
+    <combatPower>420</combatPower>
+    <rewardSilver>900</rewardSilver>
+    <rewardGoodwill>11</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>DA_BeardedTroll</pawnKind><count>1~1</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs><li>WitcherMonsters_Flavor_DA_BeardedTroll</li></flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Encounter_DA_Crestel</defName>
+    <label>crestel</label>
+    <selectionWeight>0.45</selectionWeight>
+    <requiredModPackageId>Van.Beasts</requiredModPackageId>
+    <combatPower>380</combatPower>
+    <rewardSilver>800</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>DA_Crestel</pawnKind><count>1~1</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs><li>WitcherMonsters_Flavor_DA_Crestel</li></flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Encounter_DA_Snaptoad</defName>
+    <label>giant snaptoad</label>
+    <selectionWeight>0.45</selectionWeight>
+    <requiredModPackageId>Van.Beasts</requiredModPackageId>
+    <combatPower>360</combatPower>
+    <rewardSilver>780</rewardSilver>
+    <rewardGoodwill>9</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>DA_Snaptoad</pawnKind><count>1~1</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs><li>WitcherMonsters_Flavor_DA_Snaptoad</li></flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Encounter_DA_Phrak</defName>
+    <label>phrak pair</label>
+    <selectionWeight>0.5</selectionWeight>
+    <requiredModPackageId>Van.Beasts</requiredModPackageId>
+    <combatPower>300</combatPower>
+    <rewardSilver>650</rewardSilver>
+    <rewardGoodwill>8</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>DA_Phrak</pawnKind><count>2~3</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs><li>WitcherMonsters_Flavor_DA_Phrak</li></flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef MayRequire="Van.Beasts">
+    <defName>WitcherMonsters_Encounter_DA_BlackScribe</defName>
+    <label>black scribe</label>
+    <selectionWeight>0.4</selectionWeight>
+    <requiredModPackageId>Van.Beasts</requiredModPackageId>
+    <combatPower>340</combatPower>
+    <rewardSilver>820</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>DA_BlackScribe</pawnKind><count>1~1</count><manhunter>true</manhunter></li>
+    </spawnEntries>
+    <flavorDefs><li>WitcherMonsters_Flavor_DA_BlackScribe</li></flavorDefs>
+  </ContractEncounterDef>
+
+</Defs>

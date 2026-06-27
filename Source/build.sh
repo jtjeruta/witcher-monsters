@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Builds Assemblies/WitcherMonsters.dll (and copies 0Harmony.dll) via dotnet SDK.
+# Builds Assemblies/WitcherMonsters.dll via dotnet SDK.
+# Harmony is provided at runtime by HugsLib / the game — do not ship 0Harmony.dll.
 # Set RIMWORLD_MANAGED to override the default game Managed folder path.
 
 set -euo pipefail
@@ -23,13 +24,7 @@ echo "Building WitcherMonsters.dll..."
   --nologo \
   -v:q
 
-HARMONY_SRC="$HOME/.nuget/packages/lib.harmony/2.3.3/lib/net472/0Harmony.dll"
-if [[ -f "$HARMONY_SRC" && ! -f "$OUT_DIR/0Harmony.dll" ]]; then
-  cp "$HARMONY_SRC" "$OUT_DIR/0Harmony.dll"
-fi
+rm -f "$OUT_DIR/0Harmony.dll"
 
 echo "Built: $OUT_DIR/WitcherMonsters.dll"
 ls -lh "$OUT_DIR/WitcherMonsters.dll"
-if [[ -f "$OUT_DIR/0Harmony.dll" ]]; then
-  ls -lh "$OUT_DIR/0Harmony.dll"
-fi

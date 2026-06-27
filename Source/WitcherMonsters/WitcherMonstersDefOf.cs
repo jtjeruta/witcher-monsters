@@ -11,6 +11,7 @@ namespace WitcherMonsters
         public static AbilityDef WitcherMonsters_LeshenSummonWolves;
         public static AbilityDef WitcherMonsters_LeshenSkip;
         public static AbilityDef WitcherMonsters_LeshenSpineLaunch;
+        public static QuestScriptDef WitcherMonsters_ContractHunt;
 
         static WitcherMonstersDefOf()
         {

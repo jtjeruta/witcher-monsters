@@ -1,4 +1,5 @@
 .DS_Store
 Source/obj/
 Source/bin/
+Assemblies/0Harmony.dll
 *.user
