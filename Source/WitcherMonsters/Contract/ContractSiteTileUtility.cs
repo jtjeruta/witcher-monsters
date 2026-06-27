@@ -10,6 +10,8 @@ namespace WitcherMonsters
         private const int MinDistance = 2;
         private const int MaxDistance = 10;
 
+        private static readonly List<PlanetTile> NeighborBuffer = new List<PlanetTile>();
+
         public static bool TryFindContractSiteTile(int anchorTile, int excludeTile, out int siteTile)
         {
             siteTile = -1;
@@ -18,33 +20,61 @@ namespace WitcherMonsters
                 return false;
             }
 
-            var candidates = new List<int>();
             WorldGrid grid = Find.WorldGrid;
-            for (int tileId = 0; tileId < grid.TilesCount; tileId++)
+            HashSet<int> occupiedTiles = BuildOccupiedTileSet();
+            var candidates = new List<int>();
+            var visited = new HashSet<int> { anchorTile };
+            var frontier = new Queue<(int tileId, int distance)>();
+            frontier.Enqueue((anchorTile, 0));
+
+            while (frontier.Count > 0)
             {
-                if (excludeTile >= 0 && tileId == excludeTile)
+                (int tileId, int distance) = frontier.Dequeue();
+                if (distance >= MaxDistance)
                 {
                     continue;
                 }
 
-                int dist = grid.TraversalDistanceBetween(anchorTile, tileId, passImpassable: true);
-                if (dist < MinDistance || dist > MaxDistance)
+                NeighborBuffer.Clear();
+                grid.GetTileNeighbors(new PlanetTile(tileId), NeighborBuffer);
+                foreach (PlanetTile neighbor in NeighborBuffer)
                 {
-                    continue;
-                }
+                    int neighborId = neighbor.tileId;
+                    if (!visited.Add(neighborId))
+                    {
+                        continue;
+                    }
 
-                PlanetTile tile = new PlanetTile(tileId);
-                if (!TileFinder.IsValidTileForNewSettlement(tile))
-                {
-                    continue;
-                }
+                    int neighborDistance = distance + 1;
+                    if (neighborDistance > MaxDistance)
+                    {
+                        continue;
+                    }
 
-                if (HasBlockingWorldObject(tileId))
-                {
-                    continue;
-                }
+                    frontier.Enqueue((neighborId, neighborDistance));
 
-                candidates.Add(tileId);
+                    if (neighborDistance < MinDistance || neighborDistance > MaxDistance)
+                    {
+                        continue;
+                    }
+
+                    if (excludeTile >= 0 && neighborId == excludeTile)
+                    {
+                        continue;
+                    }
+
+                    if (!TileFinder.IsValidTileForNewSettlement(neighbor))
+                    {
+                        continue;
+                    }
+
+                    if (occupiedTiles.Contains(neighborId))
+                    {
+                        continue;
+                    }
+
+                    candidates.Add(neighborId);
+                }
             }
 
             if (candidates.Count == 0)
@@ -56,17 +86,18 @@ namespace WitcherMonsters
             return true;
         }
 
-        private static bool HasBlockingWorldObject(int tileId)
+        private static HashSet<int> BuildOccupiedTileSet()
         {
+            var occupiedTiles = new HashSet<int>();
             foreach (WorldObject worldObject in Find.WorldObjects.AllWorldObjects)
             {
-                if (worldObject?.Tile == tileId)
+                if (worldObject != null)
                 {
-                    return true;
+                    occupiedTiles.Add(worldObject.Tile);
                 }
             }
 
-            return false;
+            return occupiedTiles;
         }
     }
 }

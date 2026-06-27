@@ -50,7 +50,6 @@ namespace WitcherMonsters
             Rect scrollRect = new Rect(0f, y, inRect.width, inRect.height - y - bottomMargin);
             Rect viewRect = new Rect(0f, 0f, scrollRect.width - 16f, GetContentHeight(labelWidth));
 
-            bool accepted = false;
             Widgets.BeginScrollView(scrollRect, ref scrollPosition, viewRect);
             float curY = 0f;
 
@@ -71,16 +70,9 @@ namespace WitcherMonsters
                     float buttonY = curY + (rowHeight - 28f) * 0.5f;
                     if (Widgets.ButtonText(new Rect(row.width - AcceptButtonWidth - 4f, buttonY, AcceptButtonWidth, 28f), "Accept"))
                     {
-                        if (board.TryAccept(caravan, offer, out string failReason))
-                        {
-                            accepted = true;
-                            break;
-                        }
-
-                        if (!failReason.NullOrEmpty())
-                        {
-                            Messages.Message(failReason, MessageTypeDefOf.RejectInput);
-                        }
+                        Widgets.EndScrollView();
+                        BeginAccept(offer);
+                        return;
                     }
 
                     curY += rowHeight + RowSpacing;
@@ -88,11 +80,27 @@ namespace WitcherMonsters
             }
 
             Widgets.EndScrollView();
+        }
 
-            if (accepted)
-            {
-                Close();
-            }
+        private void BeginAccept(ContractOffer offer)
+        {
+            LongEventHandler.QueueLongEvent(
+                () =>
+                {
+                    if (board.TryAccept(caravan, offer, out string failReason))
+                    {
+                        return;
+                    }
+
+                    if (!failReason.NullOrEmpty())
+                    {
+                        Messages.Message(failReason, MessageTypeDefOf.RejectInput);
+                    }
+                },
+                "Generating contract...",
+                doAsynchronously: false,
+                exceptionHandler: null);
+            Close();
         }
 
         private float GetRowHeight(string summary, float labelWidth)
