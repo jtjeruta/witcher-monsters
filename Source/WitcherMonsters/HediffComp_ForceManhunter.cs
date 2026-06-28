@@ -41,23 +41,7 @@ namespace WitcherMonsters
 
         private void EnsureManhunter()
         {
-            if (!LeshenUtility.IsActivated(parent.pawn))
-            {
-                return;
-            }
-
-            Pawn pawn = parent.pawn;
-            if (pawn.Dead || pawn.InMentalState && pawn.MentalStateDef == MentalStateDefOf.ManhunterPermanent)
-            {
-                return;
-            }
-
-            pawn.mindState?.mentalStateHandler?.TryStartMentalState(
-                MentalStateDefOf.ManhunterPermanent,
-                null,
-                forced: true,
-                forceWake: true,
-                causedByMood: false);
+            MonsterSpawnUtility.EnsureManhunter(parent.pawn);
         }
     }
 }

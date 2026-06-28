@@ -25,45 +25,37 @@
           <treeDef>LordDuty</treeDef>
         </li>
 
-        <!-- Activated: skip retreat when threatened; ranged combat only at safe distance -->
-        <li Class="WitcherMonsters.ThinkNode_ConditionalLeshenActivated">
-          <subNodes>
-            <li Class="WitcherMonsters.ThinkNode_ConditionalLeshenRetreat">
-              <threatRadius>8</threatRadius>
-              <subNodes>
-                <li Class="WitcherMonsters.JobGiver_LeshenSkipRetreat">
-                  <threatRadius>4</threatRadius>
-                </li>
-                <li Class="JobGiver_Idle" />
-              </subNodes>
-            </li>
-            <li Class="JobGiver_AIAbilityFight">
-              <targetAcquireRadius>12</targetAcquireRadius>
-              <targetKeepRadius>14</targetKeepRadius>
-              <skipIfCantTargetNow>true</skipIfCantTargetNow>
-              <ability>WitcherMonsters_LeshenSummonWolves</ability>
-            </li>
-            <li Class="JobGiver_AIAbilityFight">
-              <targetAcquireRadius>17</targetAcquireRadius>
-              <targetKeepRadius>20</targetKeepRadius>
-              <skipIfCantTargetNow>false</skipIfCantTargetNow>
-              <ability>WitcherMonsters_LeshenSpineLaunch</ability>
-            </li>
-            <li Class="JobGiver_Idle" />
-          </subNodes>
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>2.9~7.9</enemyDistToFleeRange>
+          <fleeDistRange>10~16</fleeDistRange>
         </li>
 
-        <!-- Dormant: slow shambler shuffle like a tree -->
-        <li Class="WitcherMonsters.ThinkNode_ConditionalLeshenDormant">
-          <subNodes>
-            <li Class="JobGiver_ShamblerWander">
-              <wanderRadius>3</wanderRadius>
-            </li>
-            <li Class="JobGiver_Idle" />
-          </subNodes>
+        <li Class="WitcherMonsters.JobGiver_LeshenSkipRetreat">
+          <threatRadius>2.9</threatRadius>
         </li>
 
-        <li Class="JobGiver_Idle" />
+        <li Class="JobGiver_ReactToCloseMeleeThreat">
+          <maxDistance>2.9</maxDistance>
+        </li>
+
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>25</targetAcquireRadius>
+          <targetKeepRadius>28</targetKeepRadius>
+          <skipIfCantTargetNow>true</skipIfCantTargetNow>
+          <ability>WitcherMonsters_LeshenSummonWolves</ability>
+        </li>
+
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>18</targetAcquireRadius>
+          <targetKeepRadius>20</targetKeepRadius>
+          <skipIfCantTargetNow>true</skipIfCantTargetNow>
+          <ability>WitcherMonsters_LeshenSpineLaunch</ability>
+        </li>
+
+        <li Class="JobGiver_WanderHerd">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+        </li>
       </subNodes>
     </thinkRoot>
   </ThinkTreeDef>

@@ -37,21 +37,41 @@ namespace WitcherMonsters
                 return;
             }
 
-            if (ContractBeastUtility.IsContractBeast(pawn))
+            if (!ContractBeastUtility.IsContractBeast(pawn))
+            {
+                if (WitcherMonstersDefOf.WitcherMonsters_ContractBeast == null)
+                {
+                    Log.Error("[WitcherMonsters] Missing HediffDef WitcherMonsters_ContractBeast.");
+                    return;
+                }
+
+                Hediff contractBeast = HediffMaker.MakeHediff(
+                    WitcherMonstersDefOf.WitcherMonsters_ContractBeast,
+                    pawn);
+                pawn.health.AddHediff(contractBeast);
+            }
+
+            EnsureManhunter(pawn);
+        }
+
+        public static void EnsureManhunter(Pawn pawn)
+        {
+            if (pawn == null || pawn.Dead)
             {
                 return;
             }
 
-            if (WitcherMonstersDefOf.WitcherMonsters_ContractBeast == null)
+            if (pawn.InMentalState && pawn.MentalStateDef == MentalStateDefOf.ManhunterPermanent)
             {
-                Log.Error("[WitcherMonsters] Missing HediffDef WitcherMonsters_ContractBeast.");
                 return;
             }
 
-            Hediff contractBeast = HediffMaker.MakeHediff(
-                WitcherMonstersDefOf.WitcherMonsters_ContractBeast,
-                pawn);
-            pawn.health.AddHediff(contractBeast);
+            pawn.mindState?.mentalStateHandler?.TryStartMentalState(
+                MentalStateDefOf.ManhunterPermanent,
+                null,
+                forced: true,
+                forceWake: true,
+                causedByMood: false);
         }
     }
 }

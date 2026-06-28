@@ -21,10 +21,10 @@
     </verbProperties>
     <comps>
       <li Class="WitcherMonsters.CompProperties_AbilitySummonWolves">
-        <wolfCount>2~3</wolfCount>
-        <spawnRadius>3~6</spawnRadius>
-        <maxAlliedWolvesNearby>2</maxAlliedWolvesNearby>
-        <enemySearchRadius>12</enemySearchRadius>
+        <wolfCount>4~6</wolfCount>
+        <spawnRadius>4~8</spawnRadius>
+        <maxAlliedWolvesNearby>6</maxAlliedWolvesNearby>
+        <enemySearchRadius>25</enemySearchRadius>
       </li>
     </comps>
   </AbilityDef>
