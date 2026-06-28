@@ -98,10 +98,8 @@
     </abilities>
     <lifeStages>
       <li>
-        <!-- Placeholder: swap texPath to Textures/Things/Pawn/Animal/Leshen/Leshen when art is ready -->
         <bodyGraphicData>
-          <texPath>Things/Plant/TreeWillow</texPath>
-          <graphicClass>Graphic_Random</graphicClass>
+          <texPath>Things/Pawn/Animal/Leshen/Leshen</texPath>
           <drawSize>2.8</drawSize>
           <shadowData>
             <volume>(0.8, 0.6, 0.6)</volume>
@@ -109,8 +107,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Plant/TreeWillow_Leafless</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
+          <texPath>Things/Pawn/Animal/Leshen/Dessicated_Leshen</texPath>
           <drawSize>2.8</drawSize>
         </dessicatedBodyGraphicData>
       </li>
