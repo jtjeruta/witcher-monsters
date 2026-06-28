@@ -4,6 +4,7 @@ Internal documentation for contributors. **Spoils gameplay mechanics** — keep 
 
 ## Scope (v1)
 
+- **Black blood / revenant counter** — Harmony patches (requires Witcher Potions + Anomaly): block `CompRevenant.Hypnotize` when victim has `WitcherPotion_BlackBloodHediff`; revenant backlash applies vanilla `StunHandler.StunFor` (900 ticks / ~15s, same mechanism as Aard) plus forced reveal; light melee contact `ToxicBuildup` via `Pawn.PostApplyDamage` postfix (`totalDamageDealt` param)
 - **Leshen** contract beast (`WitcherMonsters_Leshen`) with vine spine launch, wolf summons, and forest skip retreat
 - **Contract beast hediff** — dormant → activated manhunter + pacification blocks (Harmony)
 - **Monster contracts** — random world quests + settlement caravan gizmo; villager-flavor text hides the real beast
@@ -144,7 +145,7 @@ Update `texPath` in `Defs/ThingDefs_Races/WitcherMonsters_Leshen.xml` when art l
 cd Source && ./build.sh
 ```
 
-Output: `Assemblies/WitcherMonsters.dll` only (no bundled Harmony).
+Output: `Assemblies/WitcherMonsters.dll` only (no bundled Harmony). Black blood patches compile against `Lib.Harmony` NuGet; runtime Harmony comes from the mod manager / HugsLib like other RimWorld mods.
 
 Symlink to RimWorld `Mods/WitcherMonsters`. Enable Biotech, Anomaly, Witcher Base, Witcher Monster Quests.
 

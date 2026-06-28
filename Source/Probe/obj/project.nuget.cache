@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "dW+O7HfZzYFNQyVqF6H8KZpGsVgserv9lsB4uZKpGGJS9AjeMeg9gOPXpdplXBhCoE+Q1B0y55DOHmFXPV+toQ==",
+  "success": true,
+  "projectFilePath": "/Users/tristan/Projects/Personal/witcher-monsters/Source/Probe/Probe.csproj",
+  "expectedPackageFiles": [
+    "/var/folders/38/zp35845n6d7f6sm6lsmmsqx80000gn/T/cursor-sandbox-cache/d779c7de878072738462b04e5e442e7f/nuget/lib.harmony/2.3.3/lib.harmony.2.3.3.nupkg.sha512",
+    "/var/folders/38/zp35845n6d7f6sm6lsmmsqx80000gn/T/cursor-sandbox-cache/d779c7de878072738462b04e5e442e7f/nuget/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/var/folders/38/zp35845n6d7f6sm6lsmmsqx80000gn/T/cursor-sandbox-cache/d779c7de878072738462b04e5e442e7f/nuget/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
+    "/var/folders/38/zp35845n6d7f6sm6lsmmsqx80000gn/T/cursor-sandbox-cache/d779c7de878072738462b04e5e442e7f/nuget/system.text.json/6.0.9/system.text.json.6.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

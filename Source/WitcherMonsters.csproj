@@ -16,6 +16,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Probe/**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
     <Reference Include="Assembly-CSharp">
       <HintPath>$(GamePath)/Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
