@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityDef>
+    <defName>WitcherMonsters_DrownerLunge</defName>
+    <label>drowner lunge</label>
+    <description>Leap onto a nearby victim and tear at them with claws and teeth.</description>
+    <cooldownTicksRange>600~900</cooldownTicksRange>
+    <jobDef>CastJump</jobDef>
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityConsumeLeap</verbClass>
+      <label>lunge</label>
+      <range>8.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <warmupTime>0.2</warmupTime>
+      <soundCast>Pawn_Devourer_Jump</soundCast>
+      <soundLanding>Pawn_Devourer_Land</soundLanding>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_ConsumeLeap">
+        <compClass>WitcherMonsters.CompAbilityEffect_DrownerLunge</compClass>
+        <maxBodySize>2.5</maxBodySize>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

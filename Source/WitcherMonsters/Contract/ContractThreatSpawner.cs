@@ -55,18 +55,16 @@ namespace WitcherMonsters
                 return leshen;
             }
 
+            if (DrownerUtility.IsDrownerKind(kind))
+            {
+                Pawn drowner = GenerateEntityThreat(kind);
+                DrownerUtility.ApplyHostileState(drowner);
+                return drowner;
+            }
+
             if (entry.useEntityHostility)
             {
-                FactionDef entityFactionDef = DefDatabase<FactionDef>.GetNamedSilentFail("Entities");
-                Faction faction = entityFactionDef != null
-                    ? Find.FactionManager.FirstFactionOfDef(entityFactionDef)
-                    : null;
-                return PawnGenerator.GeneratePawn(
-                    new PawnGenerationRequest(
-                        kind,
-                        faction,
-                        PawnGenerationContext.NonPlayer,
-                        forceGenerateNewPawn: true));
+                return GenerateEntityThreat(kind);
             }
 
             Pawn animal = PawnGenerator.GeneratePawn(kind);
@@ -81,6 +79,20 @@ namespace WitcherMonsters
             }
 
             return animal;
+        }
+
+        private static Pawn GenerateEntityThreat(PawnKindDef kind)
+        {
+            FactionDef entityFactionDef = DefDatabase<FactionDef>.GetNamedSilentFail("Entities");
+            Faction faction = entityFactionDef != null
+                ? Find.FactionManager.FirstFactionOfDef(entityFactionDef)
+                : null;
+            return PawnGenerator.GeneratePawn(
+                new PawnGenerationRequest(
+                    kind,
+                    faction,
+                    PawnGenerationContext.NonPlayer,
+                    forceGenerateNewPawn: true));
         }
 
         private static IntVec3 FindSpawnCell(Map map, IntVec3 center, int index)

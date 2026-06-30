@@ -115,6 +115,25 @@
   </ContractFlavorDef>
 
   <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Drowner_River</defName>
+    <questTitle>Things in the river</questTitle>
+    <questDescription>Fishermen from [settlement] refuse to cast their nets. Pale shapes wait just below the surface — they lunge when you lean too close.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Drowner_Fishing</defName>
+    <questTitle>Drowned fishing camp</questTitle>
+    <questDescription>A boy from [settlement] found boats smashed on the reeds. Claw marks on the wood. Something amphibious dragged the men under.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Drowner_Ford</defName>
+    <questTitle>Ford of bones</questTitle>
+    <questDescription>Travelers reached [settlement] half-drowned and raving. A pack of waterlogged corpses guarded the crossing — fast when they leap.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef>
     <defName>WitcherMonsters_Flavor_Ghoul_Crypt</defName>
     <questTitle>Crypt desecration</questTitle>
     <questDescription>Priests at [settlement] beg for help. Something crawled from the old crypt — hunched, fast, eating the dead.</questDescription>

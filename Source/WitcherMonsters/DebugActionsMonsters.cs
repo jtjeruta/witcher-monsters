@@ -31,5 +31,51 @@ namespace WitcherMonsters
                     historical: false);
             }
         }
+
+        [DebugAction("Witcher Monsters", "Spawn Drowner pack", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void SpawnDrownerPack()
+        {
+            Map map = Find.CurrentMap;
+            if (map == null)
+            {
+                return;
+            }
+
+            IntVec3 cell = CellFinder.RandomEdgeCell(map);
+            if (!cell.Standable(map))
+            {
+                cell = CellFinder.RandomClosewalkCellNear(cell, map, 8);
+            }
+
+            int count = Rand.RangeInclusive(2, 3);
+            Pawn first = null;
+            for (int i = 0; i < count; i++)
+            {
+                IntVec3 spawnCell = CellFinder.RandomClosewalkCellNear(cell, map, 6);
+                Pawn drowner = PawnGenerator.GeneratePawn(
+                    new PawnGenerationRequest(
+                        WitcherMonstersDefOf.WitcherMonsters_Drowner,
+                        Find.FactionManager.FirstFactionOfDef(FactionDef.Named("Entities")),
+                        PawnGenerationContext.NonPlayer,
+                        forceGenerateNewPawn: true));
+                if (drowner == null)
+                {
+                    continue;
+                }
+
+                DrownerUtility.ApplyHostileState(drowner);
+                GenSpawn.Spawn(drowner, spawnCell, map);
+                first ??= drowner;
+            }
+
+            if (first != null)
+            {
+                Messages.Message(
+                    "Spawned drowner pack at map edge.",
+                    first,
+                    MessageTypeDefOf.NeutralEvent,
+                    historical: false);
+            }
+        }
     }
 }

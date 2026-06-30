@@ -107,6 +107,23 @@
   </ContractEncounterDef>
 
   <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_DrownerPack</defName>
+    <label>drowner pack</label>
+    <selectionWeight>1.0</selectionWeight>
+    <combatPower>90</combatPower>
+    <rewardSilver>400</rewardSilver>
+    <rewardGoodwill>6</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>WitcherMonsters_Drowner</pawnKind><count>2~3</count><useEntityHostility>true</useEntityHostility></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Drowner_River</li>
+      <li>WitcherMonsters_Flavor_Drowner_Fishing</li>
+      <li>WitcherMonsters_Flavor_Drowner_Ford</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef>
     <defName>WitcherMonsters_Encounter_GorehulkEscort</defName>
     <label>gorehulk escort</label>
     <selectionWeight>0.55</selectionWeight>
