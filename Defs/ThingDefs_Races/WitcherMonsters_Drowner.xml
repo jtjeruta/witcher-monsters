@@ -99,11 +99,13 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Drowner/Drowner</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.15</drawSize>
           <shaderType>CutoutComplex</shaderType>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Drowner/Dessicated_Drowner</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.15</drawSize>
         </dessicatedBodyGraphicData>
       </li>

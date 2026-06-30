@@ -99,6 +99,7 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Leshen/Leshen</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2.8</drawSize>
           <shadowData>
             <volume>(0.8, 0.6, 0.6)</volume>
@@ -107,6 +108,7 @@
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Leshen/Dessicated_Leshen</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2.8</drawSize>
         </dessicatedBodyGraphicData>
       </li>
