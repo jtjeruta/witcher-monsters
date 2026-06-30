@@ -1,5 +1,9 @@
 .DS_Store
 Source/obj/
 Source/bin/
+Source/Probe/bin/
+Source/Probe/obj/
+.texture-venv/
 Assemblies/0Harmony.dll
+_PublisherPlus.xml
 *.user

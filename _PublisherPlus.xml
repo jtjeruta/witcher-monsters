@@ -3,7 +3,11 @@
   <Excluded>
     <exclude>.git</exclude>
     <exclude>Source</exclude>
+    <exclude>.texture-venv</exclude>
     <exclude>.DS_Store</exclude>
     <exclude>DEVELOPMENT.md</exclude>
+    <exclude>_PublisherPlus.xml</exclude>
+    <exclude>.gitignore</exclude>
+    <exclude>README.md</exclude>
   </Excluded>
 </Configuration>

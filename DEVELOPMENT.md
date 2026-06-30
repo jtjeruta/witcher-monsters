@@ -117,23 +117,26 @@ Summoned wolves get `ManhunterPermanent` only (not the contract hediff). AI skip
 
 Leshen drops **40 wood** and **30 twisted meat** on butcher (`MeatAmount` + `specificMeatDef`, plus `butcherProducts` wood). Corpses use `EntityFlesh` / `CorpsesEntity` (entity butcher tab, not animal meat). No leather (`LeatherAmount` 0). `foodType` is `None` and `baseHungerRate` is 0. Melee tools have `chanceFactor` 0.
 
-## Art (placeholder → custom)
+## Art
 
-Until PNGs exist, the leshen uses **vanilla willow tree** textures (`Things/Plant/TreeWillow`, leafless for dessicated) with `drawSize` **2.8**. Trees do not rotate with facing — acceptable until custom art lands.
+**Folders:** `Textures/Things/Pawn/Animal/Leshen/`, `Textures/Things/Pawn/Animal/Drowner/`
 
-**Folder:** `Textures/Things/Pawn/Animal/Leshen/`
+| Convention | Detail |
+|------------|--------|
+| Resolution | 512×512 RGBA for pawn body sprites |
+| East | Side profile facing **right** |
+| West | Omit `_west.png` — `Graphic_Multi` mirrors `_east` at runtime |
+| North | Back-facing art |
+| South | Front-facing art |
+| Background | Black keyed to alpha before export |
 
-| File | Size |
-|------|------|
-| `Leshen_east.png` | 512×512 RGBA |
-| `Leshen_north.png` | 512×512 |
-| `Leshen_south.png` | 512×512 |
-| `Leshen_west.png` | 512×512 |
-| `Dessicated_Leshen_*.png` | 512×512 ×4 directions |
+Optional ability icons: 256×256 when ready.
 
-Optional ability icons (256×256): custom leshen art when ready.
+## Steam publish
 
-Update `texPath` in `Defs/ThingDefs_Races/WitcherMonsters_Leshen.xml` when art lands.
+`_PublisherPlus.xml` excludes dev-only paths (`.git`, `Source`, `.texture-venv`, `DEVELOPMENT.md`, etc.). A correct Workshop upload is **under 1 MB** — if you see tens of MB, check Publisher Plus preview for leaked `.texture-venv` or `Source/Probe/bin`.
+
+Do not commit `.texture-venv/` or `Source/Probe/bin/` (see `.gitignore`).
 
 ## Anomaly extension
 
