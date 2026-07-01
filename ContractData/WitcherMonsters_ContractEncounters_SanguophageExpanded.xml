@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ContractFlavorDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Flavor_VRE_Strigoi_Talons</defName>
+    <questTitle>Claw marks on the barn</questTitle>
+    <questDescription>Hunters from [settlement] found a barn torn open from above. Deep talon gouges in the beams — too wide for any wolf, too high for a man.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Flavor_VRE_Strigoi_Cave</defName>
+    <questTitle>Wings in the moonlight</questTitle>
+    <questDescription>Miners near [settlement] swear they saw a winged shape drop into the old quarry. Three men went to look; only one came back, raving about talons.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Flavor_VRE_Ekkimian_Graves</defName>
+    <questTitle>Dug-up graves</questTitle>
+    <questDescription>Gravediggers at [settlement] found fresh earth on old plots. Corpses dragged out and gnawed — not by dogs, they insist, but by something that walks upright.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Flavor_VRE_Ekkimian_Morgue</defName>
+    <questTitle>Thing in the morgue</questTitle>
+    <questDescription>Orderlies from [settlement] barricaded the hospital cellar. A desiccated figure was seen feeding on the stored dead — skin like parchment, eyes like pits.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractFlavorDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Flavor_VRE_Bruxa_Beauty</defName>
+    <questTitle>Beautiful stranger</questTitle>
+    <questDescription>Young men from [settlement] follow a rumor of a lovely traveler on the forest road. Two have been found smiling in their sleep, cold and empty.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Flavor_VRE_Bruxa_Merchant</defName>
+    <questTitle>Entranced merchants</questTitle>
+    <questDescription>A merchant caravan reached [settlement] in a daze. They remember a gracious hostess who offered wine — and woke among drained companions.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+
+  <ContractEncounterDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Encounter_VRE_Strigoi</defName>
+    <label>strigoi</label>
+    <selectionWeight>0.45</selectionWeight>
+    <requiredModPackageId>vanillaracesexpanded.sanguophage</requiredModPackageId>
+    <combatPower>380</combatPower>
+    <rewardSilver>850</rewardSilver>
+    <rewardGoodwill>11</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Sanguophage</pawnKind><xenotype>VRE_Strigoi</xenotype><count>1~1</count><hostileHumanlike>true</hostileHumanlike></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_VRE_Strigoi_Talons</li>
+      <li>WitcherMonsters_Flavor_VRE_Strigoi_Cave</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Encounter_VRE_Ekkimian</defName>
+    <label>ekkimian</label>
+    <selectionWeight>0.45</selectionWeight>
+    <requiredModPackageId>vanillaracesexpanded.sanguophage</requiredModPackageId>
+    <combatPower>340</combatPower>
+    <rewardSilver>780</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Sanguophage</pawnKind><xenotype>VRE_Ekkimian</xenotype><count>1~2</count><hostileHumanlike>true</hostileHumanlike></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_VRE_Ekkimian_Graves</li>
+      <li>WitcherMonsters_Flavor_VRE_Ekkimian_Morgue</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+  <ContractEncounterDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>WitcherMonsters_Encounter_VRE_Bruxa</defName>
+    <label>bruxa</label>
+    <selectionWeight>0.4</selectionWeight>
+    <requiredModPackageId>vanillaracesexpanded.sanguophage</requiredModPackageId>
+    <combatPower>300</combatPower>
+    <rewardSilver>720</rewardSilver>
+    <rewardGoodwill>9</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Sanguophage</pawnKind><xenotype>VRE_Bruxa</xenotype><count>1~1</count><hostileHumanlike>true</hostileHumanlike></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_VRE_Bruxa_Beauty</li>
+      <li>WitcherMonsters_Flavor_VRE_Bruxa_Merchant</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
+</Defs>

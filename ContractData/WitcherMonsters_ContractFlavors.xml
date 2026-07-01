@@ -247,4 +247,29 @@
     <preferredScene>CorpseField</preferredScene>
   </ContractFlavorDef>
 
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Sanguophage_Drained</defName>
+    <questTitle>Empty veins</questTitle>
+    <questDescription>Shepherds near [settlement] found three bodies in the pasture — pale, untouched by beasts, not a drop of blood left in them.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Sanguophage_Noble</defName>
+    <questTitle>Pale travelers</questTitle>
+    <questDescription>Caravans from [settlement] refuse the old highway. Witnesses describe elegant strangers who move too fast and leave guards dead without a wound.</questDescription>
+    <preferredScene>AbandonedCart</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Sanguophage_Chapel</defName>
+    <questTitle>Blood on the altar</questTitle>
+    <questDescription>The chapel outside [settlement] was found open at dawn. Candles still burning, communion wine gone, and the priest missing from his bed.</questDescription>
+    <preferredScene>CorpseField</preferredScene>
+  </ContractFlavorDef>
+  <ContractFlavorDef>
+    <defName>WitcherMonsters_Flavor_Sanguophage_Road</defName>
+    <questTitle>Night on the road</questTitle>
+    <questDescription>A courier reached [settlement] at sunrise, shaking. Something human-shaped hunted his party through the dark and drank them one by one.</questDescription>
+    <preferredScene>AbandonedCamp</preferredScene>
+  </ContractFlavorDef>
+
 </Defs>

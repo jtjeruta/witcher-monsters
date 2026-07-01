@@ -12,7 +12,7 @@ Take hunt jobs from random world quests or settlement caravans ("Browse witcher 
 
 Includes the leshen — a dormant forest spirit that stirs when intruders draw near, then teleports through the trees and fights at range with Gorehulk-style spine launches and wolf summons.
 
-Optional Dark Ages encounter pools load when Van.Beasts is active.</description>
+Optional Dark Ages encounter pools load when Van.Beasts is active. Optional VRE-Sanguophage encounter pools load when Vanilla Races Expanded - Sanguophage is active.</description>
   <modDependencies>
     <li>
       <packageId>Ludeon.RimWorld.Biotech</packageId>
@@ -37,5 +37,6 @@ Optional Dark Ages encounter pools load when Van.Beasts is active.</description>
     <li>Ludeon.RimWorld.Anomaly</li>
     <li>witcher.base</li>
     <li MayRequire="Van.Beasts">Van.Beasts</li>
+    <li MayRequire="vanillaracesexpanded.sanguophage">vanillaracesexpanded.sanguophage</li>
   </loadAfter>
 </ModMetaData>

@@ -35,6 +35,11 @@ namespace WitcherMonsters
                 {
                     return false;
                 }
+
+                if (!entry.xenotype.NullOrEmpty() && entry.XenotypeDef == null)
+                {
+                    return false;
+                }
             }
 
             return encounter.flavorDefs != null && encounter.flavorDefs.Count > 0;

@@ -209,4 +209,22 @@
     </flavorDefs>
   </ContractEncounterDef>
 
+  <ContractEncounterDef>
+    <defName>WitcherMonsters_Encounter_SanguophageCoven</defName>
+    <label>sanguophage coven</label>
+    <selectionWeight>0.55</selectionWeight>
+    <combatPower>320</combatPower>
+    <rewardSilver>750</rewardSilver>
+    <rewardGoodwill>10</rewardGoodwill>
+    <spawnEntries>
+      <li><pawnKind>Sanguophage</pawnKind><xenotype>Sanguophage</xenotype><count>1~2</count><hostileHumanlike>true</hostileHumanlike></li>
+    </spawnEntries>
+    <flavorDefs>
+      <li>WitcherMonsters_Flavor_Sanguophage_Drained</li>
+      <li>WitcherMonsters_Flavor_Sanguophage_Noble</li>
+      <li>WitcherMonsters_Flavor_Sanguophage_Chapel</li>
+      <li>WitcherMonsters_Flavor_Sanguophage_Road</li>
+    </flavorDefs>
+  </ContractEncounterDef>
+
 </Defs>

@@ -67,6 +67,11 @@ namespace WitcherMonsters
                 return GenerateEntityThreat(kind);
             }
 
+            if (entry.hostileHumanlike)
+            {
+                return SanguophageContractUtility.GenerateHostileThreat(entry, kind);
+            }
+
             Pawn animal = PawnGenerator.GeneratePawn(kind);
             if (entry.manhunter && animal?.mindState?.mentalStateHandler != null)
             {

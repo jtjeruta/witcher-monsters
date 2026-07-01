@@ -15,7 +15,7 @@ Villagers never name the real monster — only vague panic ("hairy beast", "walk
 
 **Rewards:** silver payment, faction goodwill, or the **Law of Surprise** — a mysterious debt that arrives within a week (precious metals, a farm animal, or a child left in your care).
 
-Optional **Dark Ages** encounter pools load automatically when the Van.Beasts mod is enabled.
+Optional **Dark Ages** encounter pools load automatically when the Van.Beasts mod is enabled. Optional **VRE-Sanguophage** encounter pools load when Vanilla Races Expanded - Sanguophage is enabled.
 
 ## Leshen
 
@@ -39,6 +39,7 @@ For contracts, visit a friendly settlement with a caravan or wait for the random
 - Built for **RimWorld 1.6**.
 - Requires **Biotech**, **Anomaly**, and **Witcher Base**.
 - Optional: **Van.Beasts** for extra contract encounter pools.
+- Optional: **Vanilla Races Expanded - Sanguophage** for extra vampire-variant contract pools.
 - Requires **Witcher Traditions** research (Witcher Base) before random offers or settlement contract gizmos appear.
 - Safe to add mid-save.
 

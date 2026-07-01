@@ -10,13 +10,15 @@ Internal documentation for contributors. **Spoils gameplay mechanics** — keep 
 - **Monster contracts** — random world quests + settlement caravan gizmo; villager-flavor text hides the real beast
 - **Contract sites** — massacre scenes (cart / camp / corpse field) + encounter-specific hostiles
 - **Rewards** — silver drop pods, faction goodwill, or Law of Surprise (7-day delayed gift)
-- **11 core encounter pools** + optional **7 Dark Ages** pools when `Van.Beasts` is active
+- **12 core encounter pools** + optional **7 Dark Ages** pools when `Van.Beasts` is active + optional **3 VRE-Sanguophage** pools when `vanillaracesexpanded.sanguophage` is active
 
 ## Dependencies
 
 Requires **Biotech**, **Anomaly**, and **Witcher Base**. Leshen AI uses `JobGiver_AIAbilityFight`, `Ability.GetJob` for forest skip retreat, and `JobGiver_ShamblerWander`. Threat detection via `LeshenThreatUtility` (player colonists, humanlikes, hostiles).
 
 Optional Dark Ages encounter defs live in `ContractData/WitcherMonsters_ContractEncounters_DarkAges.xml` with `MayRequire="Van.Beasts"`.
+
+Optional VRE-Sanguophage encounter defs live in `ContractData/WitcherMonsters_ContractEncounters_SanguophageExpanded.xml` with `MayRequire="vanillaracesexpanded.sanguophage"`.
 
 ## Monster contracts
 
@@ -36,14 +38,16 @@ Contract encounter and flavor data live in **`ContractData/`** (not `Defs/`) and
 - **`ContractEncounterDef`** — spawn pool (`spawnEntries`, `selectionWeight`, `requiredModPackageId`, rewards)
 - **`ContractFlavorDef`** — villager voice (`questTitle`, `questDescription`, optional `preferredScene`); never names the real monster
 
-Core pools: wolves, leshen, bear, sightstealers, shamblers, ghouls, gorehulk+shamblers, chimeras, devourers, revenant, metalhorror.
+Core pools: wolves, leshen, bear, sightstealers, shamblers, ghouls, drowners, gorehulk+shamblers, chimeras, devourers, revenant, metalhorror, sanguophage coven.
+
+Spawn entry flags: `manhunter` (animals), `useEntityHostility` (Anomaly entities), `hostileHumanlike` (Biotech sanguophages via `Sanguophages` faction). Optional `xenotype` forces a specific `XenotypeDef` at spawn (e.g. `Sanguophage`, `VRE_Strigoi`).
 
 ### Site generation
 
 `SitePartDef` `WitcherMonsters_ContractSite` tag `WitcherMonsters_Contract`:
 
 - `GenStep_ContractScene` — abandoned cart / camp / corpse field + human corpses
-- `GenStep_ContractThreats` — `ContractThreatSpawner` (manhunter, entity faction, leshen dormant via contract hediff)
+- `GenStep_ContractThreats` — `ContractThreatSpawner` (manhunter, entity faction, hostile humanlike sanguophages, leshen dormant via contract hediff)
 
 `WorldObjectComp_ContractSiteData` on `Site` stores encounter/flavor/reward from quest slate.
 
